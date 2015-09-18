@@ -16,9 +16,8 @@
 * Sample Output
 * -999,991
 */
-#include <iostream>
-
-using namespace std;
+#include <cstdio>
+#include <cstdlib>
 
 #define LOCAL
 
@@ -26,25 +25,21 @@ int main()
 {
 	int a = 0;
 	int b = 0;
-	while (cin >> a >> b)
+	while ( scanf("%d %d", &a, &b) != EOF)
 	{
 		int sum = a + b;
-		bool op = false;
 		if (sum < 0)
-			op = true;
-		sum = abs(sum);
-
-		//Negative add a '-'
-		if (op)
-			cout << "-";
+		{
+			printf("-");
+			sum = -sum;
+		}
 
 		if (sum < 1000)
-			cout << sum << endl;
+			printf("%d\n", sum); 
 		else if (sum < 1000000)
-			cout << sum / 1000 << "," << sum % 1000 << endl;
+			printf("%d,%03d\n", sum / 1000, sum % 1000);
 		else
-			cout << sum / 1000000 << "," << (sum % 1000000) / 1000
-			<< "," << sum % 1000 << endl;
+			printf("%d,%03d,%03d\n", sum / 1000000, (sum % 1000000) / 1000, sum % 1000 );
 	}
 
 	return 0;
