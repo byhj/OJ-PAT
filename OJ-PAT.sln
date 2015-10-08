@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1008. Elevator (20)", "src\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1009. Product of Polynomials (25)", "src\1009. Product of Polynomials (25)\1009. Product of Polynomials (25).vcxproj", "{650E77A6-DC07-4D81-99DC-E8647DEBD574}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1100. Mars Numbers (20)", "src\1100. Mars Numbers (20)\1100. Mars Numbers (20).vcxproj", "{271EE1A6-8789-420A-B772-53AF519635AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -77,6 +79,14 @@ Global
 		{650E77A6-DC07-4D81-99DC-E8647DEBD574}.Release|x64.Build.0 = Release|x64
 		{650E77A6-DC07-4D81-99DC-E8647DEBD574}.Release|x86.ActiveCfg = Release|Win32
 		{650E77A6-DC07-4D81-99DC-E8647DEBD574}.Release|x86.Build.0 = Release|Win32
+		{271EE1A6-8789-420A-B772-53AF519635AE}.Debug|x64.ActiveCfg = Debug|x64
+		{271EE1A6-8789-420A-B772-53AF519635AE}.Debug|x64.Build.0 = Debug|x64
+		{271EE1A6-8789-420A-B772-53AF519635AE}.Debug|x86.ActiveCfg = Debug|Win32
+		{271EE1A6-8789-420A-B772-53AF519635AE}.Debug|x86.Build.0 = Debug|Win32
+		{271EE1A6-8789-420A-B772-53AF519635AE}.Release|x64.ActiveCfg = Release|x64
+		{271EE1A6-8789-420A-B772-53AF519635AE}.Release|x64.Build.0 = Release|x64
+		{271EE1A6-8789-420A-B772-53AF519635AE}.Release|x86.ActiveCfg = Release|Win32
+		{271EE1A6-8789-420A-B772-53AF519635AE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,5 +98,6 @@ Global
 		{7E51F18F-9568-4DEC-BFFF-7C3657F5D33F} = {E9181BC7-3E07-49B1-AD7B-0F0161FEC726}
 		{642D00B4-F66D-49CF-B588-2B84A0C55EAF} = {E9181BC7-3E07-49B1-AD7B-0F0161FEC726}
 		{650E77A6-DC07-4D81-99DC-E8647DEBD574} = {E9181BC7-3E07-49B1-AD7B-0F0161FEC726}
+		{271EE1A6-8789-420A-B772-53AF519635AE} = {E9181BC7-3E07-49B1-AD7B-0F0161FEC726}
 	EndGlobalSection
 EndGlobal
