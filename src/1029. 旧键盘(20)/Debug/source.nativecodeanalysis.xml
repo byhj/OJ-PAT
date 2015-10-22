@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DEFECTS><DEFECT><SFA><FILEPATH>e:\github\oj\oj-pat\src\1029. 旧键盘(20)\</FILEPATH><FILENAME>source.cpp</FILENAME><LINE>23</LINE><COLUMN>14</COLUMN></SFA><DEFECTCODE>6330</DEFECTCODE><DESCRIPTION>'char' passed as _Param_(1) when 'unsigned char' is required in call to 'isalpha'.</DESCRIPTION><FUNCTION>main</FUNCTION><DECORATED>main</DECORATED><FUNCLINE>8</FUNCLINE><PATH/></DEFECT></DEFECTS>
