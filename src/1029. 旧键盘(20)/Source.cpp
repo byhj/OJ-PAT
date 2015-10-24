@@ -8,22 +8,32 @@ using namespace std;
 int main()
 {
 	string str1, str2;
+
 	while (cin >> str1 >> str2)
 	{
 		unordered_set<char> mySet;
-		auto iter = str1.find_first_not_of(str2);
+		int j = 0;
+		char ans[100]={' '};
+		int cnt = 0;
+		for (int i = 0; i != str1.size(); ++i)
+		{ 
+			if (str1[i] == str2[j] && j < str2.size())
+				++j;
+			else
+			{
+				auto ch = str1[i];
+				if (islower(ch))
+					ch = toupper(ch);
 
-		while (iter != string::npos)
-		{
-			char  ch = 	str1[iter];
-			if (isalpha(ch))
-				ch = toupper(ch);
-			mySet.insert(ch);
-			iter = str1.find_first_not_of(str2, iter+1);
+				int t;
+				for (t = 0; t < cnt; ++t)
+					if (ch == ans[t])
+						break;
+				if (t == cnt)
+				   ans[cnt++] = ch;
+			}
 		}
-		for (auto c : mySet)
-			cout << c;
-		cout << endl;
+		cout << ans << endl;
 	}
 	return 0;
 }
