@@ -7,56 +7,47 @@ using namespace std;
 
 int main()
 {
-	string str1, str2;
-	int a, b, c;
-	while (cin >> str1)
+	string str(4, '0');
+	int a, b;
+	cin >> a;
+	int i = 3;
+    
+    //change number to string
+	do {
+		str[i] = a % 10 + '0';
+		a /= 10;
+		--i;
+	} while (a);
+
+	//str = reverse(str)
+	if (str[0] == str[1] && str[1] == str[2] && str[2] == str[3])
+		cout << str << " - " << str << " = 0000" << endl;
+	else
 	{
-	
-		sort(str1.begin(), str1.end(), greater<char>() );
-		a = stoi(str1);
-		str2 = str1;
-		sort(str2.begin(), str2.end());
-		b =  stoi(str2);
-		c = a - b;
+		//loop entil get the number 6767
+		do
+		{
+			sort(str.begin(), str.end());
+			a = stoi(str);
+			string strRev(str.rbegin(), str.rend());
+			b = stoi(strRev);
 
-		string str3 = to_string(c);
-		if (str3.size() == 3)
-			str3 = '0' + str3;
-
-	     while (c != 6174)
-		 {
-			if (c == 0)
+			string st(4, '0');
+			int t = b - a;
+			int i = 3;
+			//Change the b - a result to string st
+			do 
 			{
-				cout << str1 << " - " << str2 << " = 0000" << endl;
-				break;
-			}
-			else
-			{
+				st[i] = t % 10 + '0';
+				t /= 10;
+				--i;
+			} while (t);
+			//output the equal
 
+			cout << strRev << " - " << str << " = " << st << endl;
+			str = st;
+		} while (b - a != 6174);
 
-				cout << str1 << " - " << str2 << " = " << str3 << endl;
-
-				str1 = to_string(c);
-				if (str1.size() == 3)
-					str1 = '0' + str1;
-
-				sort(str1.begin(), str1.end(), greater<char>());
-				a = stoi(str1);
-				str2 = str1;
-				sort(str2.begin(), str2.end());
-				b =  stoi(str2);
-				c = a - b;
-
-				str3 = to_string(c);
-				if (str3.size() == 3)
-					str3 = '0' + str3;
-			}
-
-		}
-
-		if (c == 6174)
-		   cout << str1 << " - " << str2 << " = " << str3 << endl;
 	}
-
 	return 0;
 }

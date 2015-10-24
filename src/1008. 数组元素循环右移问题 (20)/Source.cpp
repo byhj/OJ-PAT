@@ -13,7 +13,7 @@ int main()
 		for (int i = 0; i != n; ++i)
 			cin >> vi[i];
 
-		rotate(vi.begin(), vi.begin() + n - m, vi.end());
+		rotate(vi.begin(), vi.end() - (m % n), vi.end());
 
 		for (int i = 0; i != n; ++i)
 			if (i != n - 1)

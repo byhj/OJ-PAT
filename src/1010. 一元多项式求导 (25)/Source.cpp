@@ -7,6 +7,8 @@ int main()
 {
 	int n, m;
 	vector<int> vRatio, vExp;
+
+	//xn(n) = n*xn-1
 	while (cin >> n >> m)
 	{
 		if (m != 0)
@@ -16,6 +18,7 @@ int main()
 		}
 
 	}
+
 	for (int i = 0; i != vRatio.size(); ++i)
 	{
 		if (i != vRatio.size() - 1)
@@ -23,6 +26,7 @@ int main()
 		else
 			cout << vRatio[i] << " " << vExp[i] << endl;
 	}
+
 	if (vRatio.empty())
 		cout << "0 0" << endl;
 

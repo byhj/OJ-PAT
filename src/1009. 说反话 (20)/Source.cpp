@@ -16,6 +16,8 @@ int main()
 		string word;
 		while (iss >> word)
 			vs.push_back(word);
+
+		//reverse output the string
 		for (int i = vs.size() - 1; i >= 0; --i)
 		{
 			if (i != 0)

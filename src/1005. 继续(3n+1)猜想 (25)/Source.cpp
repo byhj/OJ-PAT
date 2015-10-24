@@ -16,6 +16,7 @@ int main()
 		unordered_set<int> mySet;
 		int *pa = new int[n + 1];
 
+		//store the (3n+1) problem numbers
 		for (int i = 0; i != n; ++i)
 		{
 			cin >> pa[i];
@@ -30,11 +31,14 @@ int main()
 				mySet.insert(m);
 			}
 		}
+		//Check ths number if already cover
 			for (int i = 0; i != n; ++i)
 			{
 				if (mySet.find(pa[i]) == mySet.end())
 					ans.push_back(pa[i]);
 			}
+
+			//Print ouput
 			sort(ans.begin(), ans.end(), greater<int>());
 			for (int i = 0; i != ans.size(); ++i)
 				if (i != ans.size() - 1)
