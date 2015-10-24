@@ -10,6 +10,7 @@ int main()
 		int cnt = 0;
 		while (n != 1)
 		{
+			//even number, /= 2;
 			if (n % 2 == 0)
 				n /= 2;
 			else

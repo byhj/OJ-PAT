@@ -13,10 +13,13 @@ int main()
 	string str;
 	while (cin >> str)
 	{
+		//add the str number
 		int sum = 0;
 		for (const auto &c : str)
 			sum += c - '0';
 		string temp = to_string(sum);
+
+		//Change the number to pingyin
 		for (int i = 0; i != temp.size(); ++i)
 		{
 			if (i != temp.size() - 1)
