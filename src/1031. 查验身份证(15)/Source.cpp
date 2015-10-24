@@ -20,17 +20,17 @@ int main()
 			int sum = 0;
 			bool error = false;
 
-			for (int i = 0; i != 17; ++i)
+			int i;
+			for (i = 0; i < 17; ++i)
 			{
-				if (isdigit(str[i]))
-					sum += (str[i] - '0') * weight[i];
-				else
-				{
-					error = true;
+				if (!isdigit(str[i]))
 					break;
-				}
+				sum += (str[i] - '0') * weight[i];
 			}
-			if (error == true || arc[sum % 11] != str[17])
+			if (i < 17)
+				cout << str << endl;
+
+			if (i < 17 || arc[sum % 11] != str[17])
 			{	
 				cout << str << endl;
 			    ++cnt;
