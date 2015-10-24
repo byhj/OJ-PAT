@@ -6,10 +6,17 @@ using namespace std;
 int main()
 {
 	string str1, str2;
-	while (cin >> str1 >> str2)
+	while (getline(cin, str1) && getline(cin, str2) )
 	{
+		//str1 maybe empty
+		if (str1.empty())
+		{
+			cout << str2 << endl;
+			continue;
+		}
+
 		bool flag = false;
-		if (str1.find('+') != string::npos)
+		if (str1.find_first_of('+') != string::npos)
 			flag = true;
 
 		string st = str2;
@@ -17,7 +24,7 @@ int main()
 		{
 			if (isalpha(st[i]))
 				st[i] = toupper(st[i]);
-			if (isalpha(str2[i]) && isupper(str2[i]) && flag)
+			if (isupper(str2[i]) && flag)
                 continue;
 			else
 			{ 

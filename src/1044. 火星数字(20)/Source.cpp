@@ -26,21 +26,18 @@ int main()
 	int n;
 	while (cin >> n)
 	{
+		cin.get();
 		while (n--)
 		{
-			cin.clear();
 			string str;
 			getline(cin, str);
-
+	
 			//Check str if a number on earth
-			bool isNumFlag = true;
-			for (const auto &c : str)
-				if (isdigit(c) == false)
-				{
-					isNumFlag = false;
-					break;
-				}
-			///////////////////////////////////////////////////
+			bool isNumFlag = false;
+             if (str.find_first_of("0123456789") != string::npos)
+			     isNumFlag = true;
+
+			///////////earth number to mar/////////////////////
 			if (isNumFlag)
 			{
 				int t = stoi(str);
@@ -52,26 +49,32 @@ int main()
 				}
 				else
 					ans = myis1[t];
+
 				cout << ans << endl;
 			}
+			//mar to earth
 			else
 			{
-				string ans;
 				vector<string> vs;
 				istringstream iss(str);
 				string st;
 				while (iss >> st)
 					vs.push_back(st);
+
+				int sum = 0;
 				if (vs.size() == 1)
-					ans = mysi1[vs[0]];
+				{
+					if (mysi1.find(vs[0]) != mysi1.end())
+						sum = mysi1[vs[0]];
+					else
+						sum = mysi2[vs[0]] + 12;
+				}
 				else
 				{
-					int sum = 0;
 					sum += mysi1[vs[1]];
 					sum += Base * mysi2[vs[0]];
-					ans = to_string(sum);
 				}
-				cout << ans << endl;
+				cout << sum << endl;
 			}
 		}
 	}
