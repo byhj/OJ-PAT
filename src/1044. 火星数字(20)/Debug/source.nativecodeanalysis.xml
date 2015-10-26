@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DEFECTS><DEFECT><SFA><FILEPATH>e:\github\oj\oj-pat\src\1044. 火星数字(20)\</FILEPATH><FILENAME>source.cpp</FILENAME><LINE>36</LINE><COLUMN>15</COLUMN></SFA><DEFECTCODE>6330</DEFECTCODE><DESCRIPTION>'const char' passed as _Param_(1) when 'unsigned char' is required in call to 'isdigit'.</DESCRIPTION><FUNCTION>main</FUNCTION><DECORATED>main</DECORATED><FUNCLINE>12</FUNCLINE><PATH/></DEFECT></DEFECTS>
