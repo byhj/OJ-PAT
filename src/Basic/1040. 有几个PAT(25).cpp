@@ -10,21 +10,19 @@ int main()
 
 	while (cin >> str)
 	{
-		long long num[3] ={ 0 };
-		for (const auto &c : str)
-		{
-			switch (c)
-			{
-			case 'P': ++num[0]; break;
-			case 'A': ++num[1]; break;
-			case 'T': ++num[2]; break;
-			default: break;
-			}
+		int nT = 0;
+		int nAT = 0;
+		int nPAT = 0;
+        for (int i = str.length()-1; i >= 0; --i)
+        {
+        	if (str[i] == 'T')
+        	  ++nT;
+        	else if (str[i] == 'A')
+        	  nAT = (nAT + nT) % 1000000007;
+        	else
+        	  nPAT = (nPAT + nAT) % 1000000007;
 		}
-		long long ans = max(max(num[0], num[1]), num[2]) % 1000000007;
-		cout << ans << endl;
+		cout << nPAT << endl;
 	}
-
-
 	return 0;
 }
